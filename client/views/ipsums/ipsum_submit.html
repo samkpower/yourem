@@ -1,0 +1,39 @@
+<template name="ipsumSubmit">
+    <form class="main">
+
+        <div class="control-group">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input class="span4" name="title" type="text" value="" placeholder="Name your ipsum"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="description">Description</label>
+            <div class="controls">
+                <textarea class="span4" name="description" type="text" value=""/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="subdomain">Subdomain</label>
+            <div class="controls">
+                <input class="span4" name="subdomain" type="text" value="" placeholder="Give your ipsum a unique subdomain"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="wordList">Ipsum Words</label>
+            <div class="controls">
+                <textarea class="span4" name="wordList" type="text" value="" placeholder="Add any number of words or phrases here.  Seperate each with a comma."/>
+            </div>
+        </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <input class="span4" type="submit" value="Submit" class="btn btn-alert"/>
+        </div>
+    </div>
+
+    </form>
+</template>

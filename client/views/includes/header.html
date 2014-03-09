@@ -7,10 +7,15 @@
 		        <span class="icon-bar"></span>
 		    </a>
 
-	        <a class="brand" href="{{pathFor 'postsList'}}">Yourem Ipsum</a>
+	        <a class="brand" href="{{pathFor 'ipsumsList'}}">Yourem Ipsum</a>
 		    <div class="nav-collapse collapse">
+
 		        <ul class="nav pull-right">
-		          <li>{{loginButtons}}</li>
+
+			        <li><a href="{{pathFor 'ipsumSubmit'}}">+Create an Ipsum!</a></li>
+     	        
+     	        	<li>{{loginButtons}}</li>
+				
 				</ul>
 			</div>
 	    </div>

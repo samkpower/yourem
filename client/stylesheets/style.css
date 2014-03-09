@@ -94,8 +94,17 @@ body{
   margin-bottom: 0 
 }
 
+.nav.pull-right .dropdown-menu{
+	background-color: #777777;
+}
+
 .dropdown-menu span {
-  display: block; padding: 3px 20px; clear: both; line-height: 20px; color: #bbb; white-space: nowrap;
+  display: block; 
+  padding: 3px 20px; 
+  clear: both; 
+  line-height: 20px; 
+  color: #bbb; 
+  white-space: nowrap;
 
 }
 
@@ -110,4 +119,9 @@ body{
 .load-more:hover {
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.1); 
+}
+
+form.main{
+	background-color: darkSalmon;
+
 }
