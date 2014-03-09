@@ -1,3 +1,3 @@
-Meteor.publish('posts', function() { 
-	return Posts.find();
+Meteor.publish('ipsums', function() { 
+	return Ipsums.find();
 });

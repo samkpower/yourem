@@ -1,0 +1,1 @@
+Ipsums = new Meteor.Collection('ipsums');
