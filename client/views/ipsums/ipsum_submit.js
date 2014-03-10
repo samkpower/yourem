@@ -1,5 +1,6 @@
 Template.ipsumSubmit.events({ 
-		'submit form': function(e) {
+	
+	'submit form': function(e) {
 	    e.preventDefault();
 
 	    var wordListRawData = $(e.target).find('[name=wordList]').val()
@@ -9,9 +10,11 @@ Template.ipsumSubmit.events({
 
 	    function turnWordListIntoArray(){
 
-	    	alert(wordListRawData)
+	    	// alert(wordListRawData)
 	    	wordListArray = wordListRawData.split(",")
-	    	alert(wordListArray)
+	    	// alert(wordListArray)
+	    	// Needs extra spaces trimmed from array values
+
 
 	    }
 
@@ -29,4 +32,5 @@ Template.ipsumSubmit.events({
 		ipsum._id = Ipsums.insert(ipsum);
 		Router.go('ipsumPage', ipsum);
 	}
+	
 });

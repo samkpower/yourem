@@ -7,7 +7,7 @@
 }
 
 body{
-	background: darkSlateGrey;
+	background: dimgray;
 	color: ghostwhite; 
 }
 
@@ -25,8 +25,14 @@ body{
 
 .ipsum {
 	*zoom: 1;
-	-webkit-transition: all 300ms 0ms; -webkit-transition-delay: ease-in; -moz-transition: all 300ms 0ms ease-in; -o-transition: all 300ms 0ms ease-in; transition: all 300ms 0ms ease-in; position: relative;
+	-webkit-transition: all 300ms 0ms;
+	-webkit-transition-delay: ease-in;
+	-moz-transition: all 300ms 0ms ease-in;
+	-o-transition: all 300ms 0ms ease-in;
+	transition: all 300ms 0ms ease-in;
+	position: relative;
 	opacity: 1;
+	background-color: darkslategray;
 }
 
 .ipsum:before, .ipsum:after {
@@ -47,7 +53,7 @@ body{
 }
 
 .ipsum .ipsum-content {
-  float: left 
+  /*float: left */
 }
 
 .ipsum .ipsum-content h3 {
@@ -123,5 +129,12 @@ body{
 
 form.main{
 	background-color: darkSalmon;
+}
+
+#ipsum-canvas{
+	height: 50px;
+	background-color: darksalmon;
+	border-radius: 8px;
+	border: 4px purple solid;
 
 }
