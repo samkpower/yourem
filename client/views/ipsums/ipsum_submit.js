@@ -11,7 +11,13 @@ Template.ipsumSubmit.events({
 	    function turnWordListIntoArray(){
 
 	    	// alert(wordListRawData)
-	    	wordListArray = wordListRawData.split(",")
+	    	wordListRawArray = wordListRawData.split(",")
+	    	wordListArray = []
+
+	    	 $.each( wordListRawArray, function (index, value) {
+		        wordListArray.push( $.trim(this) );
+		    });
+
 	    	// alert(wordListArray)
 	    	// Needs extra spaces trimmed from array values
 

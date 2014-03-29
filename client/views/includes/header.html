@@ -9,10 +9,19 @@
 
 	        <a class="brand" href="{{pathFor 'ipsumsList'}}">Yourem Ipsum</a>
 		    <div class="nav-collapse collapse">
+		    	<ul class="nav">
+		    		<li>
+		    			<a href="#aboutYouremIpsum">About</a>
+		    		</li>
+		    		<li>
+		    			<a href="#recentIpsums">Recent Ipsums</a>
+		    		</li>
+		    		<li>
+		    			<a href="{{pathFor 'ipsumSubmit'}}">+Create A New Ipsum!</a>
+		    		</li>
+		    	</ul>
 
 		        <ul class="nav pull-right">
-
-			        <li><a href="{{pathFor 'ipsumSubmit'}}">+Create an Ipsum!</a></li>
      	        
      	        	<li>{{loginButtons}}</li>
 				
