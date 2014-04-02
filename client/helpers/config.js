@@ -1,5 +1,5 @@
-Accounts.ui.config({ 
+// Accounts.ui.config({ 
 
-	passwordSignupFields: 'EMAIL_ONLY'
+// 	passwordSignupFields: 'EMAIL_ONLY'
 
-});
+// });

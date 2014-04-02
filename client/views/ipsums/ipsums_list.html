@@ -1,7 +1,72 @@
 <template name="ipsumsList">
-  <div class="ipsums">
-    {{#each ipsums}}
-      {{> ipsumItem}}
-		{{/each}}
-  </div>
+  	
+
+  	<!-- <div class="ipsums"> -->
+  	<div id="aboutYouremIpsum" class="rootSection">
+
+	  	<h2>Welcome to Yourem Ipsum!</h2>
+
+      <div class="innerSection">
+
+        <p>There are many great Ipsum generators online which help developers and writers fill out their copy with stand-in text.</p>
+        
+        <br><br>
+        <p>Now you can create your own!</p>
+        <br><br>
+        
+        <p>Below you'll find a form to create your own Ipsum Generator:</p>
+        
+        <ul>
+          <li>
+            <p>Give your Ipsum a title, a short description, and a comma-seperated list of words or phrases and you're done!</p>
+          </li>
+          <li>
+            <p>Save and share your unique URL after to use the generator any time you need text.</p>
+          </li>
+        </ul>
+
+      </div>
+
+  	</div>
+
+
+
+
+  	<div id="createNewIpsum" class="rootSection">
+
+  		<h2>Create an Ipsum!</h2>
+  		
+      <div class="innerSection">
+    		{{> ipsumSubmit}}
+      </div>
+  	</div>
+
+
+
+  	<div id="recentIpsums" class="rootSection">
+
+  	<h2>Most Recent Ipsums</h2>
+      <ul>
+      	{{#each mostRecentIpsums}}
+        		<li>
+              {{> ipsumItem}}
+            </li>
+    		{{/each}}
+      </ul>
+
+		<!-- <a href="{{pathFor ipsumsExtendedList}}" class="btn btn-alert">More..</a> -->
+
+  	</div>
+
+  	<div class="clearFix"></div>
+
+  	<footer>
+      <!-- <div class="innerSection"> -->
+        <p>
+          Yourem Ipsum created by <a href="http://www.twitter.com/gavinthompson">Gavin Thompson</a> - 2014
+        </p>
+      <!-- </div> -->
+  	</footer>
+
+
 </template>

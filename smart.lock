@@ -4,13 +4,14 @@
     "basePackages": {
       "iron-router": {},
       "spin": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "accounts-ui-bootstrap-dropdown": {},
+      "bootstrap3-less": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.2",
-        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -19,8 +20,18 @@
       },
       "accounts-ui-bootstrap-dropdown": {
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.6.5.1",
-        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+        "tag": "v0.8.3",
+        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
+      },
+      "bootstrap3-less": {
+        "git": "https://github.com/eprochasson/bootstrap3-less",
+        "tag": "v0.1.9",
+        "commit": "5c812c4d7ce72917a065f0424c3cf54e5ff2d16a"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       }
     }
   }

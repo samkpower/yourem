@@ -4,7 +4,7 @@ Template.ipsumPage.rendered = function() {
     $('#ipsum-canvas').css('opacity', 0);
     $('#ipsum-canvas h1').css('opacity', 0);
 
-
+    // console.log()
     currentIpsum = this.data
     currentIpsumArray = this.data.wordList
     arrayLength = currentIpsumArray.length
@@ -22,7 +22,7 @@ Template.ipsumPage.events({
 			    $('#ipsum-canvas h1').css('opacity', 0);
 	    // Find and set paragraph variables
 				numberParagraphs = $(e.target).find('[name=paragraphs]').val()
-				canvasHeight = (numberParagraphs * 130) +"px" //NEEDS TO BE DYNAMIC
+				canvasHeight = (numberParagraphs * 160) +"px" //NEEDS TO BE DYNAMIC
 		// Find/Set style of paragraphs 
 				_ipsumificationStyle = $(e.target).find('[name=contentStyle]').val()
 		// Animate canvas and shit in
