@@ -9,3 +9,24 @@ Template.ipsumsList.helpers({
 		);
 	}
 });
+
+
+Template.ipsumsList.rendered = function() {
+  
+          console.log("bonjour?")
+  			console.log( $('.scrollToDiv') )
+
+  			$( 'a.scrollToDiv' ).on('click', function(e) {
+  				console.log("test?")
+  			    e.preventDefault();
+  			    var target = $(this).attr("href");
+  			    console.log(target)
+
+  			    $('html, body').animate({
+  			        scrollTop: $(target).offset().top
+  			    }, 1000);
+
+  			});
+
+
+};

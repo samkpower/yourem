@@ -9,7 +9,7 @@
 // }
 
 body{
-	background: white;
+	background: #3FB8AF;
 	color: white; 
 }
 	body .navbar{
@@ -24,7 +24,7 @@ body{
 .rootSection{
 	float:right;
 	width: 100%;
-	padding: 35px 70px;
+	padding: 50px 50px 35px 70px;
 }
 	.rootSection .innerSection{
 		padding: 15px 40px;
@@ -47,6 +47,7 @@ body{
 	}
 #recentIpsums{
 	background: #FF6B6B;
+	padding-bottom: 75px;
 }
 	#recentIpsums ul{
 		padding-top: 15px;
@@ -63,6 +64,8 @@ footer{
 	width: 100%;
 	padding: 10px 40px;
 	// height:30px;
+	bottom: 0px;
+	position: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 #ipsumGenerator{
 	background: #3FB8AF;
 	color: ghostwhite;
+	padding-top: 55px;
 }
 
 	#ipsumGenerator h2{
@@ -95,10 +99,51 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 
-#ipsum-canvas{
-	height: 50px;
-	background-color: darksalmon;
-	border-radius: 8px;
-	border: 4px purple solid;
+// #ipsum-canvas{
+// 	height: 50px;
+// 	background-color: darksalmon;
+// 	border-radius: 8px;
+// 	border: 4px purple solid;
+// }
+
+.ipsum-content p, #ipsumForm{
+	margin-left: 40px;
+}
+
+#ipsumGenerator .ipsum-content h1 {
+	color: #556270;
+	margin-top: 0px;
+	padding-top: 30px;
+	padding-left: 10px;
+}
+
+#ipsumGenerator h4{
+	padding-left: 10px;
+}
+
+#ipsum-generator .btn{
+	margin-top: 15px;
+	margin-bottom: 20px;
 
 }
+
+
+#ipsum-canvas{
+	display: none;
+   opacity: 0;
+   border-top: 1px solid #556270;
+   width: 100%;
+   // margin: 10px 0px 50px 0px;
+   margin: 0px;
+   margin-bottom: 25px;
+   padding-left: 60px;
+   padding-right: 60px;
+   padding-top: 50px;
+   padding-bottom: 70px;
+   background-color: #556270;
+}
+
+.bottomBuffer{
+	margin-bottom: 25px;
+}
+

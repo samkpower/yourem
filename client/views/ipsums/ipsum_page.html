@@ -4,38 +4,56 @@
 		<div class="ipsum">
 	    	<div class="ipsum-content">
 
-	      		<h2>
-	      			<a href="{{pathFor 'ipsumPage'}}">{{title}}</a>
-	      			<hr/>
-	      		</h2>
-	      		<h4>
-	      			<span>Submitted by {{author}}</span>
+	      		<h1 class="bottomBuffer">
+	      			{{title}}
+	      		</h1>
+	      		
+	      		<h4 class="bottomBuffer">
+	      			Submitted by {{author}}
 	      		</h4>
+	      		
 
-	      		<p>
-	      			{{description}}
-	      		</p>
+	      		<h4>Description:</h4> 
+	      			<p class="bottomBuffer">{{description}}</p>
+	      			
+
 			
 			</div>
 
 			<div id="ipsum-generator">
-
-				<form id="hipster-ipsum" action="/" method="get">
-						Paragraphs:
-							<input type="number" maxlength="2" name="paragraphs" value="5">
+				<h4>Generate Paragraphs:</h4>  
 				
-						Type:
-							<select id="contentStyle" name="contentStyle">
-								<option value="theme" selected="">Theme-only</option>
-								<!-- <option value="theme-sentence" selected="">Themed sentence-structure.</option> -->
-								<option value="latin" selected="">Theme/Latin Fuse</option>
-							</select>
-							
-						<input type="submit" value="Give me words!">
+
+				<form role="form" id="ipsumForm">
+				<div class="row">
+					<div class="form-group col-md-3">
+					    <label for="numberParagraphs">Number of paragraphs:</label>
+					    <input type="number" class="form-control" name="paragraphs" id="numberParagraphs" value="5">
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="form-group col-md-3">
+					    <label for="paragraphFlavour">Paragraph flavour:</label>
+					    <select class="form-control" id="paragraphFlavour" name="contentStyle">
+						    <option value="latin">Theme w/Latin</option>
+					        <option value="theme">Themed Words Only</option>
+					    </select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-3">
+						<button type="submit" class="btn btn-default">Ipsum Me!</button>
+					</div>
+				</div>
+
 				</form>
 
+
 				<div id="ipsum-canvas">
-					<h1 style="margin-top : 150px; margin-left: 200px">WORDS!!!</h1>
+					<h1>WORDS!!!</h1>
 					<div clas="innerCanvas"></div>
 				</div>
 

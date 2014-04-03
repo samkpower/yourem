@@ -33,7 +33,7 @@
 
 <template name="header">
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -49,17 +49,18 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active">
+	        <!-- <li class="active"> -->
+	        <li>
 	        	<a href="/">Home</a>
 	        </li>
 	        <li>
-	        	<a href="#aboutYouremIpsum">About</a>
+	        	<a href="#aboutYouremIpsum" class="scrollToDiv">About</a>
 	        </li>
 	        <li>
-	        	<a href="#createNewIpsum">+Create A New Ipsum!</a>
+	        	<a href="#createNewIpsum" class="scrollToDiv">+Create A New Ipsum!</a>
 	        </li>
 	        <li>
-	        	<a href="#recentIpsums">Recent Ipsums</a>
+	        	<a href="#recentIpsums" class="scrollToDiv">Recent Ipsums</a>
 	        </li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

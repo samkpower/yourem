@@ -30,8 +30,8 @@ Template.ipsumPage.events({
 		// Find/Set style of paragraphs 
 				_ipsumificationStyle = $(e.target).find('[name=contentStyle]').val()
 		// Animate canvas and shit in
-				Template.ipsumPage.animateCanvas()
-				Template.ipsumPage.paragraphGeneration()			
+				Template.ipsumPage.paragraphGeneration()
+				Template.ipsumPage.animateCanvas()			
 	}
 
 });
@@ -46,19 +46,55 @@ Template.ipsumPage.events({
 
 
 Template.ipsumPage.animateCanvas = function() {
-	$('#ipsum-canvas').animate({
-		opacity: 1, 
-		height: canvasHeight
-	}, 1200, function() {
-        // Animation complete.
-    });
 
 
-	$('#ipsum-canvas h1').animate({
-		opacity: 1, 
-	}, 500, function() {
-        // Animation complete.
-    });
+	var sliderHeight = "0";
+	var initialDelay = 0;
+	var slideDuration = 1200;
+	var opacityDelay = 0
+	 
+  	animateSetup()
+	 
+    var delay = function() { sliderOpen(); };
+    setTimeout(delay, initialDelay);
+
+    function animateSetup(){
+    	$('#ipsum-canvas').each(function () {
+    	    var current = $(this);
+    	    current.attr("box_h", current.height());
+    	});
+    	$("#ipsum-canvas").css("height", sliderHeight);
+    }
+	 
+	function sliderOpen(){
+	    // var open_height = $("#ipsum-canvas").attr("box_h") + "px";
+	    // console.log( Number( $("#ipsum-canvas").attr("box_h") ) + 80 )
+	    var delay2 = function() { fadeInCanvas(); };
+	    setTimeout(delay2, opacityDelay);
+
+	    var heightWithBuffer = Number( $("#ipsum-canvas").attr("box_h")) + 80;
+	   	var open_height = heightWithBuffer + "px";
+	    $("#ipsum-canvas").animate({"height": open_height, paddingBottom: "20px"}, {duration: slideDuration });
+	}
+
+
+
+	// $('#ipsum-canvas').animate({
+	// 	opacity: 1, 
+	// 	height: canvasHeight
+	// }, 1200, function() {
+ //        // Animation complete.
+ //    });
+
+	function fadeInCanvas(){
+		$('#ipsum-canvas').show();
+
+		$('#ipsum-canvas').animate({
+			opacity: 1, 
+		}, 2000, function() {
+	        // Animation complete.
+	    });
+	}
 };
 
 
