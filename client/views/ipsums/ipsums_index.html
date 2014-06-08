@@ -1,8 +1,8 @@
 <template name="ipsumsIndex">
-  	
+  
 
   	<!-- <div class="ipsums"> -->
-  	<div id="aboutYouremIpsum" class="rootSection">
+  	<div id="aboutYouremIpsum" class="rootSection brightBlueBG">
 
 	  	<h2>Welcome to Yourem Ipsum!</h2>
 
@@ -32,7 +32,7 @@
 
 
 
-  	<div id="createNewIpsum" class="rootSection">
+  	<div id="createNewIpsum" class="rootSection brightGreenBG">
 
   		<h2>Create an Ipsum!</h2>
   		
@@ -43,22 +43,14 @@
 
 
 
-  	<div id="recentIpsums" class="rootSection">
+  	<div id="recentIpsums" class="rootSection brightBlueBG">
 
-  	<h2>Most Recent Ipsums</h2>
-      <ul>
-      	{{#each mostRecentIpsums}}
-        		<li>
-              {{> ipsumItem}}
-            </li>
-    		{{/each}}
-      </ul>
-
-		<!-- <a href="{{pathFor ipsumsExtendedList}}" class="btn btn-alert">More..</a> -->
+  	  <a href="{{pathFor 'ipsumsList'}}" class="btn btn-default btn-lg brightGreenBG" role="button">
+              Check out Popular Ipsums!
+      </a>
 
   	</div>
 
   	<div class="clearFix"></div>
-
 
 </template>

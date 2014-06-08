@@ -1,12 +1,63 @@
 @import "/packages/bootstrap3-less/bootstrap.import.less";
 
-// brightBlue - rgb(0, 141, 174)
-// darkBlue - rgb(0, 56, 52)
-// brightGreen - rgb(203, 255, 0)
-// bluishWhite - rgb(245, 245, 245)
-// whiteGrey - rgb(213, 215, 219)
-// midGrey - rgb(166, 168, 171)
-// darkGrey - rgb(128, 129, 132)
+
+@brightBlue:  rgb(0, 141, 174);
+@darkBlue:  rgb(0, 56, 52);
+@brightGreen:  rgb(203, 255, 0);
+@vibeWhite:  rgb(245, 245, 245);
+@whiteGrey:  rgb(213, 215, 219);
+@midGrey:  rgb(166, 168, 171);
+@darkGrey:  rgb(128, 129, 132);
+
+.brightBlue{
+	color: @brightBlue;
+}
+.brightBlueBG{
+	background-color: @brightBlue;
+}
+
+.darkBlue{
+	color: @darkBlue;
+}
+.darkBlueBG{
+	background-color: @darkBlue;
+}
+
+.brightGreen{
+	color: @brightGreen;
+}
+.brightGreenBG{
+	background-color: @brightGreen;
+}
+
+.vibeWhite{
+	color: @vibeWhite;
+}
+.vibeWhiteBG{
+	background-color: @vibeWhite;
+}
+
+.whiteGrey{
+	color: @whiteGrey;
+}
+.whiteGreyBG{
+	background-color: @whiteGrey;
+}
+
+.midGrey{
+	color: @midGrey;
+}
+.midGreyBG{
+	background-color: @midGrey;
+}
+
+.darkGrey{
+	color: @darkGrey;
+}
+.darkGreyBG{
+	background-color: @darkGrey;
+}
+
 
 // .grid-block, .main, .ipsum, .comments li, .comment-form {
 // 	background: #fff;
@@ -17,12 +68,13 @@
 // }
 
 body{
-	background: #3FB8AF;
-	color: white; 
+	background: @brightBlue;
+	color: @vibeWhite; 
 }
 	body .navbar{
 		margin-bottom: 0px;
 	}
+
 
 .clearFix{
 	clear:both
@@ -43,18 +95,18 @@ body{
 	}
 	
 #aboutYouremIpsum{
-		background: #4ECDC4;
+		// background: #4ECDC4;
 		// height: 200px
 		// padding: 40px
 	}
 #createNewIpsum{
-	background: #C7F464;
+	// background: #C7F464;
 }
 	#createNewIpsum label{
 		text-shadow: 1px 1px #556270
 	}
 #recentIpsums{
-	background: #FF6B6B;
+	// background: #FF6B6B;
 	padding-bottom: 75px;
 }
 	#recentIpsums ul{
@@ -63,8 +115,8 @@ body{
 
 	}
 	#recentIpsums a{
-		color: #556270;
-		text-shadow: none;
+		// color: #556270;
+		// text-shadow: none;
 	}
 
 footer{
@@ -73,7 +125,7 @@ footer{
 	padding: 10px 40px;
 	// height:30px;
 	bottom: 0px;
-	position: fixed;
+	// position: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -154,4 +206,38 @@ h1, h2, h3, h4, h5, h6 {
 .bottomBuffer{
 	margin-bottom: 25px;
 }
+
+
+// ******** NEW CHANGE ****** STYLE REVAMP *********
+#main{
+	position: relative;
+	top: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.container{
+	padding-top: 20px;
+}
+#recentIpsums a{
+	// color: #556270;
+	// text-shadow: none;
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.ipsums{
+	padding: 20px;
+}
+
+.ipsums .ipsumBtn{
+	margin: 10px auto;
+	min-width: 150px;
+	max-width: 200px;
+	display: block;
+	text-align: center;
+	color: @brightBlue;
+}
+
 
