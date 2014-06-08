@@ -1,4 +1,4 @@
-Template.ipsumsList.helpers({ 
+Template.ipsumsIndex.helpers({ 
 	ipsums: function() {
 		return Ipsums.find();
 	},
@@ -11,7 +11,7 @@ Template.ipsumsList.helpers({
 });
 
 
-Template.ipsumsList.rendered = function() {
+Template.ipsumsIndex.rendered = function() {
   
           console.log("bonjour?")
   			console.log( $('.scrollToDiv') )
