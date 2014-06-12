@@ -1,8 +1,11 @@
 <template name="ipsumItem">
 	<div class="ipsum">
+		<h2>{{title}}</h2>
+	  
+    	<p id="ipsum-{{id}}">
+    		{{exampleIpsum}}
+    	</p>
 
-	      	<a href="{{pathFor 'ipsumPage'}}" class="btn btn-default brightGreenBG ipsumBtn">{{title}}</a> 
-
-    <!-- <a href="{{pathFor 'ipsumPage'}}" class="discuss btn">Check Out Ipsum!</a> -->
+		<a href="{{pathFor 'ipsumPage'}}" class="btn btn-default brightGreenBG">Link</a> 	    	
 	</div>
 </template>

@@ -26,24 +26,13 @@ Template.ipsumPage.events({
 			    $('#ipsum-canvas h1').css('opacity', 0);
 	    // Find and set paragraph variables
 				numberParagraphs = $(e.target).find('[name=paragraphs]').val()
-				canvasHeight = (numberParagraphs * 130) +"px" //NEEDS TO BE DYNAMIC
 		// Find/Set style of paragraphs 
 				_ipsumificationStyle = $(e.target).find('[name=contentStyle]').val()
 		// Animate canvas and shit in
 				Template.ipsumPage.paragraphGeneration()
 				Template.ipsumPage.animateCanvas()			
 	}
-
 });
-
-
-
-
-// Template.ipsumPage.testFunction = function() {
-// 	console.log("test?")
-// };
-
-
 
 Template.ipsumPage.animateCanvas = function() {
 
@@ -119,16 +108,11 @@ Template.ipsumPage.generateSentence = function() {
 		
 		newSentence.push( newWord )
 	};
-	
 
 	completedSentence = Template.ipsumPage._stringifySentence(newSentence);
 
 	return completedSentence
 };
-
-
-
-
 
 
 Template.ipsumPage._getRandomWord = function() {
