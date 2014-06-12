@@ -171,41 +171,45 @@ Template.ipsumPage._getRandomWord = function() {
 	var randomWordValue = Math.floor((Math.random() * arrayLength)+0);
 	// Convert randomWordValue into actual word
 	randomWord = currentIpsumArray[randomWordValue]
+	randomWord = Template.ipsumPage._wordStrip( randomWord )
 
 	return randomWord
 };
+
+Template.ipsumPage._wordStrip = function( word ) {
+	word = Template.ipsumPage._wordStripPunctuation( word )
+	word = Template.ipsumPage._wordStripUnderscores( word )
+	word = Template.ipsumPage._wordStripNumbers( word )
+
+	return word
+}
+
+Template.ipsumPage._wordStripPunctuation = function( word ) {
+	word.replace(/[^\w\s\-]/g, '')
+	return word
+}
+
+Template.ipsumPage._wordStripUnderscores = function( word ) {
+	word.replace(/[\_]/g, '')
+	return word
+}
+
+Template.ipsumPage._wordStripNumbers = function( word ) {
+	word.replace(/[\d]/g, '')
+	return word
+}
 
 
 
 
 Template.ipsumPage._stringifySentence = function(array) {
 	
-	// // Remove below block after going live and test similar code in ipsum submit js
-		// ******
-				strippedArray = []
-
-				$.each( array, function (index, value) {
-			        strippedArray.push( $.trim(this) );
-			    });
-		// ******
-	// //
 
 	newString = strippedArray.join(' ');
 
-	console.log("***********")
-	console.log( newString.charAt(0) )
-	console.log("***********")
 
-	newString = newString.toLowerCase();
-	// 
-	// console.log("alpha char")
-	// console.log(newString.charAt(0))
-	// 
-	newString = Template.ipsumPage._capitalizeFirstLetter(newString);
-	// 
-	// console.log("-----capitalized now? ---")
-	// console.log(newString)
-	// 
+	newString = newString.toLowerCase();  
+	newString = Template.ipsumPage._capitalizeFirstLetter(newString);  
 	newString = newString + ".";
 
 	return newString
@@ -215,11 +219,6 @@ Template.ipsumPage._stringifySentence = function(array) {
 
 
 Template.ipsumPage._capitalizeFirstLetter = function(string) {
-	// GAVIN FIX THIS FUNCTION - BROKEN
-	// console.log("Test capitalization")
-	// console.log(string)
-	// console.log("Test ......")
-	// console.log(string.charAt(0).toUpperCase() + string.slice(1));
 	return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
@@ -268,7 +267,7 @@ Template.ipsumPage.theEnglishLatinCrossHybridizationOfDoctorMoreau = function(){
 
 	// Generate baseword
 	baseWord = Template.ipsumPage._getRandomWord()
-
+	// console.log(baseWord)
 	// Set variable to check if word ends in vowel
 	baseWordLastLetter = baseWord.charAt(baseWord.length - 1)
 
