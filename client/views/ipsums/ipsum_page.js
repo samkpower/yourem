@@ -16,7 +16,7 @@ Template.ipsumPage.events({
 
 	'submit form': function(e) {
 		e.preventDefault();
-
+			
 			currentIpsum = this
 			currentIpsumArray = this.wordList
 			arrayLength = currentIpsumArray.length
@@ -48,55 +48,21 @@ Template.ipsumPage.events({
 Template.ipsumPage.animateCanvas = function() {
 
 
-	var sliderHeight = "0";
-	var initialDelay = 0;
-	var slideDuration = 1200;
-	var opacityDelay = 0
-	 
-  	animateSetup()
-	 
-    var delay = function() { sliderOpen(); };
-    setTimeout(delay, initialDelay);
+	// $("#ipsum-canvas").hide()
+	$("#ipsum-canvas").slideDown()
+	Template.ipsumPage.fadeInCanvas()
 
-    function animateSetup(){
-    	$('#ipsum-canvas').each(function () {
-    	    var current = $(this);
-    	    current.attr("box_h", current.height());
-    	});
-    	$("#ipsum-canvas").css("height", sliderHeight);
-    }
-	 
-	function sliderOpen(){
-	    // var open_height = $("#ipsum-canvas").attr("box_h") + "px";
-	    // console.log( Number( $("#ipsum-canvas").attr("box_h") ) + 80 )
-	    var delay2 = function() { fadeInCanvas(); };
-	    setTimeout(delay2, opacityDelay);
-
-	    var heightWithBuffer = Number( $("#ipsum-canvas").attr("box_h")) + 80;
-	   	var open_height = heightWithBuffer + "px";
-	    $("#ipsum-canvas").animate({"height": open_height, paddingBottom: "20px"}, {duration: slideDuration });
-	}
-
-
-
-	// $('#ipsum-canvas').animate({
-	// 	opacity: 1, 
-	// 	height: canvasHeight
-	// }, 1200, function() {
- //        // Animation complete.
- //    });
-
-	function fadeInCanvas(){
-		$('#ipsum-canvas').show();
-
-		$('#ipsum-canvas').animate({
-			opacity: 1, 
-		}, 2000, function() {
-	        // Animation complete.
-	    });
-	}
 };
 
+Template.ipsumPage.fadeInCanvas = function(){
+	$('#ipsum-canvas').show();
+
+	$('#ipsum-canvas').animate({
+		opacity: 1, 
+	}, 2000, function() {
+        // Animation complete.
+    });
+}
 
 
 Template.ipsumPage.generateParagraph = function() {
@@ -205,7 +171,7 @@ Template.ipsumPage._wordStripNumbers = function( word ) {
 Template.ipsumPage._stringifySentence = function(array) {
 	
 
-	newString = strippedArray.join(' ');
+	newString = array.join(' ');
 
 
 	newString = newString.toLowerCase();  
