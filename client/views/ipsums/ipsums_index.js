@@ -12,21 +12,21 @@ Template.ipsumsIndex.helpers({
 
 
 Template.ipsumsIndex.rendered = function() {
-  
-          console.log("bonjour?")
-  			console.log( $('.scrollToDiv') )
 
-  			$( 'a.scrollToDiv' ).on('click', function(e) {
-  				console.log("test?")
-  			    e.preventDefault();
-  			    var target = $(this).attr("href");
-  			    console.log(target)
+          $( 'a.scrollToDiv' ).on('click', function(e) {
+              
+              if(Router.current().lookupTemplate() == "ipsumsIndex"){
+                console.log("test?")
+                  e.preventDefault();
+                  var target = $(this).attr("data-scrollTo");
+                  console.log(target)
 
-  			    $('html, body').animate({
-  			        scrollTop: $(target).offset().top
-  			    }, 1000);
+                  $('html, body').animate({
+                      scrollTop: $(target).offset().top
+                  }, 1000);
+              }else{
+                // go to link
+              }
+          });
 
-  			});
-
-
-};
+}
