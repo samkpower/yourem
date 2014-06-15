@@ -1,11 +1,18 @@
 <template name="ipsumItem">
 	<div class="ipsum">
 		<h2>{{title}}</h2>
+		<h4>
+			<em>
+				{{description}} by {{author}}
+			</em>
+		</h4>
+
+
 	  
-    	<p id="ipsum-{{id}}">
+    	<p id="ipsum-{{id}}" class="exampleParagraph">
     		{{exampleIpsum}}
     	</p>
 
-		<a href="{{pathFor 'ipsumPage'}}" class="btn btn-default brightGreenBG">Link</a> 	    	
+		<a href="{{pathFor 'ipsumPage'}}" class="btn btn-default brightGreenBG">Go to ipsum</a> 	    	
 	</div>
 </template>
