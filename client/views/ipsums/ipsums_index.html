@@ -1,56 +1,48 @@
 <template name="ipsumsIndex">
-  
 
-  	<!-- <div class="ipsums"> -->
-  	<div id="aboutYouremIpsum" class="rootSection brightBlueBG">
+      <!-- 
+    	<div id="aboutYouremIpsum" class="rootSection brightBlueBG">
 
-	  	<h2>Welcome to Yourem Ipsum!</h2>
+  	  	<h2>Welcome to Yourem Ipsum!</h2>
 
-      <div class="innerSection">
+        <div class="innerSection">
 
-        <p>There are many great Ipsum generators online which help developers and writers fill out their copy with stand-in text.</p>
-        
-        <br><br>
-        <p>Now you can create your own!</p>
-        <br><br>
-        
-        <p>Below you'll find a form to create your own Ipsum Generator:</p>
-        
-        <ul>
-          <li>
-            <p>Give your Ipsum a title, a short description, and a comma-seperated list of words or phrases and you're done!</p>
-          </li>
-          <li>
-            <p>Save and share your unique URL after to use the generator any time you need text.</p>
-          </li>
-        </ul>
+          <p>There are many great Ipsum generators online which help developers and writers fill out their copy with stand-in text.</p>
+          
+          <br><br>
+          <p>Now you can create your own!</p>
+          <br><br>
+          
+          <p>Below you'll find a form to create your own Ipsum Generator:</p>
+          
+          <ul>
+            <li>
+              <p>Give your Ipsum a title, a short description, and a comma-seperated list of words or phrases and you're done!</p>
+            </li>
+            <li>
+              <p>Save and share your unique URL after to use the generator any time you need text.</p>
+            </li>
+          </ul>
 
-      </div>
+        </div>
 
-  	</div>
-
+    	</div> -->
 
 
 
-  	<div id="createNewIpsum" class="rootSection brightGreenBG">
 
-  		<h2>Create an Ipsum!</h2>
-  		
-      <div class="innerSection">
-    		{{> ipsumSubmit}}
-      </div>
-  	</div>
+    
+      		{{> ipsumSubmit}}
+     
 
+    	<div id="recentIpsums" class="rootSection brightBlueBG">
 
+    	  <a href="{{pathFor 'ipsumsList'}}" class="btn btn-default btn-lg brightGreenBG" role="button">
+                Check out Popular Ipsums!
+        </a>
 
-  	<div id="recentIpsums" class="rootSection brightBlueBG">
+    	</div>
 
-  	  <a href="{{pathFor 'ipsumsList'}}" class="btn btn-default btn-lg brightGreenBG" role="button">
-              Check out Popular Ipsums!
-      </a>
-
-  	</div>
-
-  	<div class="clearFix"></div>
+    	<div class="clearFix"></div>
 
 </template>

@@ -1,4 +1,5 @@
 @import "/packages/bootstrap3-less/bootstrap.import.less";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
 @brightBlue:  rgb(0, 141, 174);
@@ -59,20 +60,14 @@
 }
 
 
-// .grid-block, .main, .ipsum, .comments li, .comment-form {
-// 	background: #fff;
-// 	border-radius: 3px;
-// 	padding: 10px;
-// 	margin-bottom: 10px;
-// 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-// }
-
 body{
 	background: @brightBlue;
-	color: @vibeWhite; 
+	color: @vibeWhite;
+	font-family: 'Open Sans', sans-serif
 }
 	body .navbar{
 		margin-bottom: 0px;
+		text-shadow: 1px 1px @brightGreen;
 	}
 
 
@@ -94,17 +89,20 @@ body{
 		font-size: 18px;	
 	}
 	
-#aboutYouremIpsum{
-		// background: #4ECDC4;
-		// height: 200px
-		// padding: 40px
+	.container label{
+		color: @darkGrey;
+		text-shadow: 1px 1px @brightGreen;
 	}
-#createNewIpsum{
-	// background: #C7F464;
-}
-	#createNewIpsum label{
-		text-shadow: 1px 1px #556270
+	.container input, .container select, .container textarea{
+		border: 1px @brightGreen solid;
 	}
+
+	.container button{
+		color: @vibeWhite;
+		border: 1px solid @brightGreen;
+		background: @darkGrey;
+	}
+
 #recentIpsums{
 	// background: #FF6B6B;
 	padding-bottom: 75px;
@@ -114,39 +112,26 @@ body{
 		padding-left: 50px;
 
 	}
-	#recentIpsums a{
-		// color: #556270;
-		// text-shadow: none;
-	}
+	
 
 footer{
 	background: #C44D58;
 	width: 100%;
 	padding: 10px 40px;
-	// height:30px;
 	bottom: 0px;
-	// position: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	text-shadow: 1px 2px #556270;
+	color: @darkGrey;
+	text-shadow: 2px 1px @brightGreen;
 }
-
-
-// .navbar {
-// 	margin-bottom: 10px 
-// }
-  
-// .navbar .navbar-inner {
-// 	border-radius: 0px 0px 3px 3px; 
-// }
 
 #spinner {
  height: 300px;
 }
 
 #ipsumGenerator{
-	background: #3FB8AF;
+	background: @whiteGrey;
 	color: ghostwhite;
 	padding-top: 55px;
 }
@@ -159,12 +144,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 
-// #ipsum-canvas{
-// 	height: 50px;
-// 	background-color: darksalmon;
-// 	border-radius: 8px;
-// 	border: 4px purple solid;
-// }
 
 .ipsum-content p, #ipsumForm{
 	margin-left: 40px;
@@ -184,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
 #ipsum-generator .btn{
 	margin-top: 15px;
 	margin-bottom: 20px;
-
 }
 
 
@@ -218,6 +196,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .container{
 	padding-top: 20px;
+	border: 1px @brightGreen solid;
+}
+
+.innerContainer{
+	border: 1px @brightGreen solid;
 }
 #recentIpsums a{
 	// color: #556270;
@@ -225,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	width: 60%;
 	margin: 0 auto;
+	border: 1px solid @darkGrey;
 }
 
 .ipsums{
@@ -242,5 +226,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .ipsum .exampleParagraph{
 	padding: 5px 35px;
+	color: black;
 }
 

@@ -1,33 +1,37 @@
 <template name="ipsumSubmit">
 
-    <form role="form">
-      <div class="form-group">
-        <label for="ipsumTitle">Title</label>
-        <input type="text" class="form-control" id="ipsumTitle" name="title" placeholder="Name your ipsum">
-      </div>
-      <div class="form-group">
-        <label for="ipsumAuthor">Author</label>
-        <input type="text" class="form-control" id="ipsumAuthor" name="author" placeholder="Your name">
-      </div>
-      <div class="form-group">
-        <label for="ipsumDescription">Describe Your Ipsum</label>
-        <textarea class="form-control" rows="2" id="ipsumDescription" name="description">
-            Describe Your Ipsum....
-        </textarea>
-      </div>
-      <div class="form-group">
-        <label for="ipsumWordlist">Ipsum Words</label>
-        <textarea class="form-control" rows="4" id="ipsumWordlist" name="wordList" placeholder="">
-            List any number of words or phrases here which will make up your Ipsum.  Make sure to seperate each word or phrase with a comma!
-        </textarea>
-      </div>
-      <!-- <div class="checkbox">
-        <label>
-          <input type="checkbox"> Check me out
-        </label>
-      </div> -->
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    <div id="createNewIpsum" class="rootSection whiteGreyBG">
+
+        <h2>Create an Ipsum!</h2>      
+        <div class="innerSection">
+            
+            <form role="form">
+              <div class="form-group">
+                <label for="ipsumTitle">Title</label>
+                <input type="text" class="form-control" id="ipsumTitle" name="title" placeholder="Name your ipsum">
+              </div>
+              <div class="form-group">
+                <label for="ipsumAuthor">Author</label>
+                <input type="text" class="form-control" id="ipsumAuthor" name="author" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="ipsumDescription">Describe Your Ipsum</label>
+                <textarea class="form-control" rows="2" id="ipsumDescription" name="description" placeholder="Describe Your Ipsum...."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="ipsumWordlist">Ipsum Words</label>
+                <textarea class="form-control" rows="4" id="ipsumWordlist" name="wordList" placeholder="List any number of words or phrases here which will make up your Ipsum.  Make sure to seperate each word or phrase with a comma!"></textarea>
+              </div>
+              <!-- <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Check me out
+                </label>
+              </div> -->
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+
+    </div>
 
     
 </template>
