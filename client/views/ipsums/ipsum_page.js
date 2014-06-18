@@ -135,17 +135,17 @@ Template.ipsumPage._wordStrip = function( word ) {
 }
 
 Template.ipsumPage._wordStripPunctuation = function( word ) {
-	word.replace(/[^\w\s\-]/g, '')
+	word = word.replace(/[^\w\s\-]/g, '')
 	return word
 }
 
 Template.ipsumPage._wordStripUnderscores = function( word ) {
-	word.replace(/[\_]/g, '')
+	word = word.replace(/[\_]/g, '')
 	return word
 }
 
 Template.ipsumPage._wordStripNumbers = function( word ) {
-	word.replace(/[\d]/g, '')
+	word = word.replace(/[\d]/g, '')
 	return word
 }
 
@@ -182,7 +182,7 @@ Template.ipsumPage._generateStylizedLatinWord = function(){
 	}else if(tripleSidedCoinFlip == 1){
 		// 
 		newLatinifiedWord = Template.ipsumPage._generateRandomLatinIpsumWord()
-		console.log(newLatinifiedWord)
+		// console.log(newLatinifiedWord)
 		// 
 	}else if(tripleSidedCoinFlip == 2){
 		newLatinifiedWord = Template.ipsumPage.theEnglishLatinCrossHybridizationOfDoctorMoreau()
