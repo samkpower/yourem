@@ -4,57 +4,40 @@
 		<div class="ipsum">
 	    	<div class="ipsum-content">
 
-	      		<h1 class="bottomBuffer">
+	      		<h1 class="bottomBuffer h1-font">
 	      			{{title}}
 	      		</h1>
 	      		
-	      		<h4 class="bottomBuffer">
-	      			Submitted by {{author}}
-	      		</h4>
-	      		
+	      		<h2 class="bottomBuffer h2-font">
+	      			A finely crafted ipsum by {{author}}
+	      		</h2>
 
-	      		<h4>Description:</h4> 
-	      			<p class="bottomBuffer">{{description}}</p>
-	      			
-
-			
+	      		<p class="bottomBuffer p-font">{{description}}</p>
 			</div>
 
 			<div id="ipsum-generator">
-				<h4>Generate Paragraphs:</h4>  
-				
-
-				<form role="form" id="ipsumForm">
-				<div class="row">
-					<div class="form-group col-md-3">
-					    <label for="numberParagraphs">Number of paragraphs:</label>
-					    <input type="number" class="form-control" name="paragraphs" id="numberParagraphs" value="5">
+				<form role="form">
+					<div class="">
+					    <label for="numberParagraphs" class="h1-font">How many paragraphs?</label>
+					    <input type="number" class="numberPicker" name="paragraphs" id="numberParagraphs" value="5">
 					</div>
-				</div>
 
-				<div class="row">
-
-					<div class="form-group col-md-3">
-					    <label for="paragraphFlavour">Paragraph flavour:</label>
-					    <select class="form-control" id="paragraphFlavour" name="contentStyle">
-						    <option value="latin">Theme w/Latin</option>
-					        <option value="theme">Themed Words Only</option>
+					<div>
+					    <label for="paragraphFlavour" class="h1-font">Pick your flavour:</label>
+					    <select class="optionPicker" id="paragraphFlavour" name="contentStyle">
+						    <option value="latin">Classical Latin</option>
+					        <option value="theme">Only My Words and Phrases, Please</option>
 					    </select>
 					</div>
-				</div>
 
-				<div class="row">
-					<div class="form-group col-md-3">
-						<button type="submit" class="btn btn-default">Ipsum Me!</button>
+					<div>
+						<button type="submit" class="submit">Ipsum Me!</button>
 					</div>
-				</div>
-
 				</form>
 
-
-				<div id="ipsum-canvas">
+				<div id="ipsum-canvas" class="p-font">
 					<h1></h1>
-					<div clas="innerCanvas"></div>
+					<div></div>
 				</div>
 
 			</div>

@@ -1,86 +1,25 @@
 <template name="ipsumSubmit">
 
-    <div id="createNewIpsum" class="rootSection whiteGreyBG">
+    <div class="createNewIpsum">
 
-        <h2>Create an Ipsum!</h2>      
-        <div class="innerSection">
+        <h2 class="h2-font">Let's get started:</h2>      
+        <div>
             
             <form role="form">
-              <div class="form-group">
-                <label for="ipsumTitle">Title</label>
-                <input type="text" class="form-control" id="ipsumTitle" name="title" placeholder="Name your ipsum">
+              <div>
+                <input type="text" class="input-text" id="ipsumTitle" name="title" placeholder="What do you want to call your Ipsum?">
               </div>
-              <div class="form-group">
-                <label for="ipsumAuthor">Author</label>
-                <input type="text" class="form-control" id="ipsumAuthor" name="author" placeholder="Your name">
+              <div>
+                <input type="text" class="input-text" id="ipsumAuthor" name="author" placeholder="Your Name, Please">
               </div>
-              <div class="form-group">
-                <label for="ipsumDescription">Describe Your Ipsum</label>
-                <textarea class="form-control" rows="2" id="ipsumDescription" name="description" placeholder="Describe Your Ipsum...."></textarea>
+              <div>
+                <textarea class="textarea textarea-sm" rows="2" id="ipsumDescription" name="description" placeholder="Describe Your Ipsum...."></textarea>
               </div>
-              <div class="form-group">
-                <label for="ipsumWordlist">Ipsum Words</label>
-                <textarea class="form-control" rows="4" id="ipsumWordlist" name="wordList" placeholder="List any number of words or phrases here which will make up your Ipsum.  Make sure to seperate each word or phrase with a comma!"></textarea>
+              <div>
+                <textarea class="textarea textarea-lg" rows="4" id="ipsumWordlist" name="wordList" placeholder="Add words and phrases. Make sure to separate each word or phrase with a comma!"></textarea>
               </div>
-              <!-- <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Check me out
-                </label>
-              </div> -->
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button class="submit" type="submit">Submit</button>
             </form>
         </div>
-
-    </div>
-
-    
+    </div>  
 </template>
-
-
-
-<!-- 
-
-    <form class="main">
-
-        <div class="control-group">
-            <label class="control-label" for="title">Title</label>
-            <div class="controls">
-                <input class="span4" name="title" type="text" value="" placeholder="Name your ipsum"/>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="description">Description</label>
-            <div class="controls">
-                <textarea class="span4" name="description" type="text" value=""></textarea>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="author">Author</label>
-            <div class="controls">
-                <textarea class="span4" name="author" type="text" value=""></textarea>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="twitter">Link Your Twitter Account?</label>
-            <div class="controls">
-                <textarea class="span4" name="twitter" type="text" value=""></textarea>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <label class="control-label" for="wordList">Ipsum Words</label>
-            <div class="controls">
-                <textarea class="span4" name="wordList" type="text" value="" placeholder="Add any number of words or phrases here.  Seperate each value with a comma."></textarea>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <div class="controls">
-                <input class="span4 btn btn-alert" type="submit" value="Submit"/>
-            </div>
-        </div>
-
-    </form> -->

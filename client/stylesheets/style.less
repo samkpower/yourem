@@ -1,231 +1,58 @@
-@import "/packages/bootstrap3-less/bootstrap.import.less";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,600,700|Josefin+Sans:400,700|Montserrat:400,700|Raleway:300,400,800);
 
+@import url("sampleipsum.css");
+@import url("ipsum_submit.css");
 
-@brightBlue:  rgb(0, 141, 174);
-@darkBlue:  rgb(0, 56, 52);
-@brightGreen:  rgb(203, 255, 0);
-@vibeWhite:  rgb(245, 245, 245);
-@whiteGrey:  rgb(213, 215, 219);
-@midGrey:  rgb(166, 168, 171);
-@darkGrey:  rgb(128, 129, 132);
+/*body * {
+	border: 1px solid red;
+	box-sizing: border-box;
+}*/
 
-.brightBlue{
-	color: @brightBlue;
-}
-.brightBlueBG{
-	background-color: @brightBlue;
+body {
+	padding: 0px;
+	margin: 0px;
 }
 
-.darkBlue{
-	color: @darkBlue;
-}
-.darkBlueBG{
-	background-color: @darkBlue;
-}
-
-.brightGreen{
-	color: @brightGreen;
-}
-.brightGreenBG{
-	background-color: @brightGreen;
+.h1-font {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	line-height: 100%;
+	color: darkgrey;
+	margin: 0px;
 }
 
-.vibeWhite{
-	color: @vibeWhite;
-}
-.vibeWhiteBG{
-	background-color: @vibeWhite;
-}
-
-.whiteGrey{
-	color: @whiteGrey;
-}
-.whiteGreyBG{
-	background-color: @whiteGrey;
+.h2-font {
+	font-family: 'Josefin Sans', sans-serif;
+	color: grey;
+	margin: 0px;
+	line-height: 150%;
 }
 
-.midGrey{
-	color: @midGrey;
-}
-.midGreyBG{
-	background-color: @midGrey;
-}
-
-.darkGrey{
-	color: @darkGrey;
-}
-.darkGreyBG{
-	background-color: @darkGrey;
+.p-font {
+	font-family: 'Raleway', sans-serif;
+	color: grey;
+	line-height: 150%;
+	font-weight: 300;
 }
 
-
-body{
-	background: @brightBlue;
-	color: @vibeWhite;
-	font-family: 'Open Sans', sans-serif
-}
-	body .navbar{
-		margin-bottom: 0px;
-		text-shadow: 1px 1px @brightGreen;
-	}
-
-
-.clearFix{
-	clear:both
-}
-
-
-.rootSection{
-	float:right;
-	width: 100%;
-	padding: 50px 50px 35px 70px;
-}
-	.rootSection .innerSection{
-		padding: 15px 40px;
-	}
-
-	.rootSection .innerSection p, .ipsum-content{
-		font-size: 18px;	
-	}
-	
-	.container label{
-		color: @darkGrey;
-		text-shadow: 1px 1px @brightGreen;
-	}
-	.container input, .container select, .container textarea{
-		border: 1px @brightGreen solid;
-	}
-
-	.container button{
-		color: @vibeWhite;
-		border: 1px solid @brightGreen;
-		background: @darkGrey;
-	}
-
-#recentIpsums{
-	// background: #FF6B6B;
-	padding-bottom: 75px;
-}
-	#recentIpsums ul{
-		padding-top: 15px;
-		padding-left: 50px;
-
-	}
-	
-
-footer{
-	background: #C44D58;
-	width: 100%;
-	padding: 10px 40px;
-	bottom: 0px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: @darkGrey;
-	text-shadow: 2px 1px @brightGreen;
-}
-
-#spinner {
- height: 300px;
-}
-
-#ipsumGenerator{
-	background: @whiteGrey;
-	color: ghostwhite;
-	padding-top: 55px;
-}
-
-	#ipsumGenerator h2{
-		color: ghostwhite
-	}
-	#ipsumGenerator input{
-		color: darkslategray
-	}
-
-
-
-.ipsum-content p, #ipsumForm{
-	margin-left: 40px;
-}
-
-#ipsumGenerator .ipsum-content h1 {
-	color: #556270;
-	margin-top: 0px;
-	padding-top: 30px;
-	padding-left: 10px;
-}
-
-#ipsumGenerator h4{
-	padding-left: 10px;
-}
-
-#ipsum-generator .btn{
-	margin-top: 15px;
-	margin-bottom: 20px;
-}
-
-
-#ipsum-canvas{
-	display: none;
-   opacity: 0;
-   border-top: 1px solid #556270;
-   width: 100%;
-   // margin: 10px 0px 50px 0px;
-   margin: 0px;
-   margin-bottom: 25px;
-   padding-left: 60px;
-   padding-right: 60px;
-   padding-top: 50px;
-   padding-bottom: 70px;
-   background-color: #556270;
-}
-
-.bottomBuffer{
-	margin-bottom: 25px;
-}
-
-
-// ******** NEW CHANGE ****** STYLE REVAMP *********
-#main{
-	position: relative;
-	top: 50px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.container{
-	padding-top: 20px;
-	border: 1px @brightGreen solid;
-}
-
-.innerContainer{
-	border: 1px @brightGreen solid;
-}
-#recentIpsums a{
-	// color: #556270;
-	// text-shadow: none;
-	display: block;
-	width: 60%;
+.new-ipsum {
+	width: 80%;
 	margin: 0 auto;
-	border: 1px solid @darkGrey;
 }
 
-.ipsums{
-	padding: 20px;
+.yourem-ipsum {
+	width: 40%;
+	float: left;
+	padding: 5%;
 }
 
-.ipsums .ipsumBtn{
-	margin: 10px auto;
-	min-width: 150px;
-	max-width: 200px;
-	display: block;
-	text-align: center;
-	color: @brightBlue;
+.creation-panel {
+	width: 40%;
+	float: left;
+	padding: 5%;
 }
 
-.ipsum .exampleParagraph{
-	padding: 5px 35px;
-	color: black;
+footer {
+	clear: both;
 }
-

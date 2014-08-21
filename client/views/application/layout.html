@@ -1,17 +1,11 @@
 <template name="layout">
-	<!-- <div class="container"> -->
-		{{>header}}
-	
-	    <div id="main" class="row-fluid">
-			<div class="container darkBlueBG">  	
-
-		    	<div class="innerContainer">
-				    {{> yield}}
-				</div>
-				    {{>footer}}
-			</div>
-	    </div>
-	    
-	    
-	<!-- </div> -->
+	<div class="new-ipsum">  	
+		<div class="yourem-ipsum">
+			{{> youremipsum }}
+		</div>
+    	<div class="creation-panel">
+		    {{> yield}}
+		</div>
+		    {{>footer}}
+	</div>
 </template>
